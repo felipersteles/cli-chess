@@ -33,7 +33,8 @@ public class Board {
     }
 
     public void placePiece(Piece piece, Position pos) {
-        if(thereIsAPiece(pos)) throw new BoardException("Já existe uma pela nessa posição: " + pos);
+        if (thereIsAPiece(pos))
+            throw new BoardException("Já existe uma pela nessa posição: " + pos);
         pieces[pos.getRow()][pos.getColumn()] = piece;
 
         // esse acesso direto só é possivel
@@ -41,6 +42,20 @@ public class Board {
         // como board esta no mesmo pacote
         // ele tem acesso.
         piece.position = pos;
+    }
+
+    public Piece removePiece(Position pos) {
+        if (!positionExists(pos))
+            throw new BoardException("Esta posição não existe no tabuleiro.");
+
+        if (piece(pos) == null)
+            return null;
+
+        Piece removedPiece = piece(pos);
+        removedPiece.position = null;
+        pieces[pos.getRow()][pos.getColumn()] = null;
+
+        return removedPiece;
     }
 
     private boolean positionExists(int row, int column) {
@@ -55,7 +70,8 @@ public class Board {
     }
 
     public boolean thereIsAPiece(Position pos) {
-        if(!positionExists(pos)) throw new BoardException("Posição não encontrada");
+        if (!positionExists(pos))
+            throw new BoardException("Posição não encontrada");
         return piece(pos) != null;
     }
 
