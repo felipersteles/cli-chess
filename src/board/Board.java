@@ -5,7 +5,6 @@ public class Board {
     private int columns;
     private Piece[][] pieces; // matrix de peças
 
-
     public Board(int rows, int columns) {
         this.rows = rows;
         this.columns = columns;
@@ -44,4 +43,13 @@ public class Board {
         return pieces[position.getRow()][position.getColumn()];
     }
 
+    public void placePiece(Piece piece, Position pos) {
+        pieces[pos.getRow()][pos.getColumn()] = piece;
+
+        // esse acesso direto só é possivel
+        // pois position é protected então
+        // como board esta no mesmo pacote
+        // ele tem acesso.
+        piece.position = pos;
+    }
 }
