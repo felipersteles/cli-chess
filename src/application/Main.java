@@ -27,7 +27,8 @@ public class Main {
 
                 ChessPiece capturedPiece = chessMatch.performChessMove(source, target);
 
-                System.out.println("Peça removida: " + capturedPiece);
+                System.out.println("Peça removida: " + capturedPiece + ". Press any key to continue.");
+                sc.nextLine();
             } catch (ChessException e) {
                 System.out.print(e.getMessage() + " Press enter to exit.");
                 sc.nextLine();
