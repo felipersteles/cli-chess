@@ -25,26 +25,9 @@ public class Position {
         this.column = column;
     }
 
-    public Position row(int row) {
-        setRow(row);
-        return this;
-    }
-
-    public Position column(int column) {
-        setColumn(column);
-        return this;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (o == this)
-            return true;
-        if (!(o instanceof Position)) {
-            return false;
-        }
-        
-        Position position = (Position) o;
-        return row == position.row && column == position.column;
+    public void setValues(int row, int column){
+        this.row = row;
+        this.column = column;
     }
 
     @Override
