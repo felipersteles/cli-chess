@@ -10,10 +10,22 @@ import chess.pieces.Rook;
 // sistema de xadrez
 public class ChessMatch {
     private Board board;
+    private int turn;
+    private Color currentPlayer;
 
     public ChessMatch() {
         board = new Board(8, 8);
+        currentPlayer = Color.WHITE;
+        turn = 0;
         initialSetup();
+    }
+
+    public int getTurn() {
+        return turn;
+    }
+
+    public Color getCurrentPlayer() {
+        return currentPlayer;
     }
 
     // as peças do tipo Piece não são retornadas e sim
@@ -40,15 +52,17 @@ public class ChessMatch {
 
         Piece capturedPiece = makeMove(source, target);
 
+        nextTurn();
+
         return (ChessPiece) capturedPiece;
     }
 
     public boolean[][] possibleMoves(ChessPosition sourcePosition) {
-		Position position = sourcePosition.toPosition();
-		validateSourcePosition(position);
-        
-		return board.piece(position).possibleMoves();
-	}
+        Position position = sourcePosition.toPosition();
+        validateSourcePosition(position);
+
+        return board.piece(position).possibleMoves();
+    }
 
     private Piece makeMove(Position sourcePosition, Position targetPosition) {
         Piece capturingPiece = board.removePiece(sourcePosition);
@@ -63,6 +77,10 @@ public class ChessMatch {
             throw new ChessException("Não tem peça na posição de origem.");
         }
 
+        if (currentPlayer != ((ChessPiece) board.piece(position)).getColor()) {
+            throw new ChessException("A peça escolhida não é do seu time.");
+        }
+
         if (!board.piece(position).isThereAnyPossibleMove()) {
             throw new ChessException("Não existem movimentos possiveis para a peça escolhida.");
         }
@@ -72,6 +90,11 @@ public class ChessMatch {
         if (!board.piece(source).possibleMove(target)) {
             throw new ChessException("A peça escolhida nao pode se mover para a posição selecionada.");
         }
+    }
+
+    private void nextTurn() {
+        turn++;
+        currentPlayer = (currentPlayer == Color.WHITE) ? Color.BLACK : Color.WHITE;
     }
 
     private void placeNewPiece(char column, int row, ChessPiece piece) {
