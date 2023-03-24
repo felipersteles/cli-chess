@@ -33,3 +33,6 @@ After it you just need to click in the [start](./start.sh) file.
 TODO: Explicar o metodo `performChessMove()` no [ChessMatch](./src/chess/ChessMatch.java)
 
 ## Pieces
+
+## Refs
+I based myself on the tutorial of this web course: https://www.udemy.com/share/1013hw3@NBkCro2I8P8y-A8eSBKjQpVlfD1xm4QlM6AOmeuGwNhIH9qHRx8kUzwlO0Rtogx--w==/
