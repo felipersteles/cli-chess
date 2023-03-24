@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import chess.ChessMatch;
@@ -37,7 +36,7 @@ public class UI {
 
     // https://stackoverflow.com/questions/2979383/java-clear-the-console
     public static void clearScreen() {
-        System.out.print("\033[H\033[2J");
+        System.out.print("\033\143");
         System.out.flush();
     }
 
@@ -90,7 +89,7 @@ public class UI {
             System.out.println("CHECKMATE!");
             System.out.println(
                     "VENCE O TIME " + ((chessMatch.getCurrentPlayer() == Color.BLACK) ? "PRETO" : "BRANCO") + "!");
-                    System.out.println();
+            System.out.println();
         }
     }
 

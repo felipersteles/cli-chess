@@ -20,7 +20,9 @@ public class Main {
         while (!chessMatch.getCheckMate()) {
             try {
                 UI.clearScreen();
-                UI.printBoard(chessMatch.getPieces());
+                System.out.println("Desenvolvido por Felipe Teles ;)");
+                System.out.println("See my GitHub page: ");
+                System.out.println("https://github.com/felipersteles");
                 System.out.println();
                 UI.printMatch(chessMatch, capturedPieces);
                 System.out.println();
