@@ -78,10 +78,10 @@ public class UI {
         System.out.println();
         printCapturedPieces(capturedPieces);
         System.out.println();
-        System.out.println("Turn: " + chessMatch.getTurn());
+        System.out.println("Numero de jogadas: " + chessMatch.getTurn());
 
         if (!chessMatch.getCheckMate()) {
-            System.out.println("Waiting player: " + chessMatch.getCurrentPlayer());
+            System.out.println("Vez do time: " + ((chessMatch.getCurrentPlayer() == Color.BLACK) ? "preto" : "branco"));
             if (chessMatch.getCheck()) {
                 System.out.println("CHECK!");
             }
