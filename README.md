@@ -1,6 +1,6 @@
-<div align="center">
-<img src="https://www.gallery.ca/sites/default/files/thumbnailchessopt2.jpg" width=500/>
-</div>
+
+
+<div align="center"><img src="https://www.gallery.ca/sites/default/files/thumbnailchessopt2.jpg" height="300" width="100%"/></div>
 
 # CLI Chess ♟️  
 
