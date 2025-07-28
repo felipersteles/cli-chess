@@ -1,6 +1,6 @@
 
 
-<div align="center"><img src="[https://www.gallery.ca/sites/default/files/thumbnailchessopt2.jpg](https://substackcdn.com/image/fetch/$s_!uhRj!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff4e13a41-fbf6-4817-9146-33e209c8916f_546x236.png)" height="300" width="100%"/></div>
+<div align="center"><img src="./images/Honoré_Daumier_032-2.jpg" height="300" width="100%"/></div>
 
 # CLI Chess ♟️  
 
