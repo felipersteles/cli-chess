@@ -1,10 +1,16 @@
-# Chess
-Not finished yet
+<div align="center">
+<img src="https://www.gallery.ca/sites/default/files/thumbnailchessopt2.jpg" width=500/>
+</div>
+
+# CLI Chess ♟️  
+
+A command-line chess game written in Java. 
+
 ## Running the game
 
 ### Pre requisites
  - [JAVA 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
- - [Git bash](https://git-scm.com/downloads)
+ - Bash
 
 ### How to run
 First you have to copy next line
@@ -26,13 +32,17 @@ Java HotSpot(TM) 64-Bit Server VM (build 17.0.6+9-LTS-190, mixed mode, sharing)
 
 ```
 
-After it you just need to click in the [start](./start.sh) file. 
+After it you just need to run the game present in the [start](./start.sh) file. Still in the bash you must run the following command
+```bash
+# Running the project
+$ sh ./start.sh
 
+```
 
 ## Rules of Chess
-TODO: Explicar o metodo `performChessMove()` no [ChessMatch](./src/chess/ChessMatch.java)
+TODO: Explain `performChessMove()` no [ChessMatch](./src/chess/ChessMatch.java)
 
 ## Pieces
 
 ## Refs
-I based myself on the tutorial of this web course: https://www.udemy.com/share/1013hw3@NBkCro2I8P8y-A8eSBKjQpVlfD1xm4QlM6AOmeuGwNhIH9qHRx8kUzwlO0Rtogx--w==/
+I based myself on the tutorial of this web course made by [Nelio Alves](https://www.udemy.com/share/1013hw3@NBkCro2I8P8y-A8eSBKjQpVlfD1xm4QlM6AOmeuGwNhIH9qHRx8kUzwlO0Rtogx--w==/).
